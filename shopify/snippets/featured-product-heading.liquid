@@ -1,0 +1,16 @@
+{% liquid
+  assign heading = heading | split: ' '
+  capture heading_formatted
+    for word in heading
+      if forloop.last
+        echo '<span class="text-white">'
+        echo word
+        echo '</span>'
+      else
+        echo word
+      endif
+      echo '[separator]'
+    endfor
+  endcapture
+%}
+<div class="heading font-adorn-condensed-sans text-center text-black text-heading1 mt-4 text-shadow">{{ heading_formatted | join: '[separator]' |  replace: '[separator]', ' ' }}</div>

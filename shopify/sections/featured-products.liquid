@@ -1,25 +1,43 @@
 <div
+  class="bg-gray-100 relative p-10 overflow-hidden"
   data-section-type="featured-products"
   data-section-id="{{ section.id }}"
 >
-  <!-- Slider main container -->
-  <div class="swiper">
-    <!-- Additional required wrapper -->
-    <div class="swiper-wrapper">
-      <!-- Slides -->
-      <div class="swiper-slide">Slide 1</div>
-      <div class="swiper-slide">Slide 2</div>
-      <div class="swiper-slide">Slide 3</div>
-    </div>
-    <!-- If we need pagination -->
-    <div class="swiper-pagination"></div>
+  <div class="content relative z-10">
+    {% liquid
+      assign featured_collection = section.settings.featured_collection | default: collections.all
+      assign background_image = section.settings.background_image
+      render 'featured-product-heading', heading: section.settings.heading
+    %}
   </div>
+  {% if background_image %}
+    <img class="absolute left-0 top-0 z-0 h-fit" width="100%" height="auto" src="{{ background_image | image_url: width: 1700 }}" alt="Background Image">
+  {% endif %}
+
 </div>
 
 {% schema %}
   {
     "name": "Featured Products",
     "tag": "section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading",
+        "default": "Our best sellers"
+      },
+      {
+        "type": "collection",
+        "label": "Featured Collection",
+        "id": "featured_collection"
+      },
+      {
+        "type": "image_picker",
+        "id": "background_image",
+        "label": "Background image"
+      }
+    ],
     "presets": [
       {
         "name": "Featured Products"

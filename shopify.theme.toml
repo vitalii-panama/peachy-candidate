@@ -1,4 +1,3 @@
 [environments.dev]
-store = ""
+store = "quickstart-453a4acc.myshopify.com"
 path = "."
-theme-editor-sync = true
