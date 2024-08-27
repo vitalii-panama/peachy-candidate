@@ -12,7 +12,7 @@
     %}
   </div>
   {% if background_image %}
-    <img class="absolute left-0 top-0 z-0 h-fit" width="100%" height="auto" src="{{ background_image | image_url: width: 1700 }}" alt="Background Image">
+    <img loading="lazy" class="absolute left-0 top-0 z-0 h-fit" width="100%" height="auto" src="{{ background_image | image_url: width: 1700 }}" alt="Background Image">
   {% endif %}
 </div>
 <script>
