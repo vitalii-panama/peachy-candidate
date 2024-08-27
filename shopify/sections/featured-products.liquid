@@ -1,5 +1,5 @@
 <div
-  class="bg-gray-100 relative p-10 overflow-hidden"
+  class="bg-white relative p-4 md:p-10 overflow-hidden"
   data-section-type="featured-products"
   data-section-id="{{ section.id }}"
 >
@@ -7,15 +7,17 @@
     {% liquid
       assign featured_collection = section.settings.featured_collection | default: collections.all
       assign background_image = section.settings.background_image
-      render 'featured-product-heading', heading: section.settings.heading
+      render 'featured-products-heading', heading: section.settings.heading
+      render 'featured-products-items', collection: featured_collection
     %}
   </div>
   {% if background_image %}
     <img class="absolute left-0 top-0 z-0 h-fit" width="100%" height="auto" src="{{ background_image | image_url: width: 1700 }}" alt="Background Image">
   {% endif %}
-
 </div>
-
+<script>
+  window.cart = {{ cart | json }}
+</script>
 {% schema %}
   {
     "name": "Featured Products",

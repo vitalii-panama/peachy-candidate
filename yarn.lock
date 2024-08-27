@@ -2965,6 +2965,11 @@ jiti@^1.18.2:
   resolved "https://registry.yarnpkg.com/jiti/-/jiti-1.18.2.tgz#80c3ef3d486ebf2450d9335122b32d121f2a83cd"
   integrity sha512-QAdOptna2NYiSSpv0O/BwoHBSmz4YhpzJHyi+fnMRTXFjp7B8i/YG5Z8IfusxB1ufjcD2Sre1F3R+nX3fvy7gg==
 
+jquery@^3.7.1:
+  version "3.7.1"
+  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.7.1.tgz#083ef98927c9a6a74d05a6af02806566d16274de"
+  integrity sha512-m4avr8yL8kmFN8psrbFFFmB/If14iN5o9nw/NgnnM+kybDJpRsAynV2BsfpTYrTRysYUdADVD7CkUUizgkpLfg==
+
 js-tokens@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-4.0.0.tgz#19203fb59991df98e3a287050d4647cdeaf32499"
@@ -4041,6 +4046,13 @@ rimraf@^3.0.2:
   dependencies:
     glob "^7.1.3"
 
+rivets@^0.9.6:
+  version "0.9.6"
+  resolved "https://registry.yarnpkg.com/rivets/-/rivets-0.9.6.tgz#5081e5ed3944def7f6fcd3a326ee42168799fd33"
+  integrity sha512-KfdMjLRWw4+38ej9bRXegKZVfYo0jEacwadA5z6NTKya+YohwGemwdbxvJ52WCXODkTnR4Q8UmUC6HVxsdzkxA==
+  dependencies:
+    sightglass "~0.2.4"
+
 run-parallel@^1.1.9:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/run-parallel/-/run-parallel-1.2.0.tgz#66d1368da7bdf921eb9d95bd1a9229e7f21a43ee"
@@ -4157,6 +4169,11 @@ shell-quote@^1.6.1:
   resolved "https://registry.yarnpkg.com/shell-quote/-/shell-quote-1.8.1.tgz#6dbf4db75515ad5bac63b4f1894c3a154c766680"
   integrity sha512-6j1W9l1iAs/4xYBI1SYOVZyFcCis9b4KCLQ8fgAGG07QvzaRLVVRQvAy85yNmmZSjYjg4MWh4gNvlPujU/5LpA==
 
+shopify-cartjs@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/shopify-cartjs/-/shopify-cartjs-1.1.0.tgz#87ff11f3c607cf08fb9025baf779d398720ad225"
+  integrity sha512-jeEJic9q3h/hjm+gy1b701eqZfJFdBAoBkJxndamy00TzMBa/WUWCpa311C5YpIpy3AX+aCkCKkk+BHm5OEGiw==
+
 side-channel@^1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/side-channel/-/side-channel-1.0.4.tgz#efce5c8fdc104ee751b25c58d4290011fa5ea2cf"
@@ -4165,6 +4182,11 @@ side-channel@^1.0.4:
     call-bind "^1.0.0"
     get-intrinsic "^1.0.2"
     object-inspect "^1.9.0"
+
+sightglass@~0.2.4:
+  version "0.2.6"
+  resolved "https://registry.yarnpkg.com/sightglass/-/sightglass-0.2.6.tgz#9120bb852d259cf821274856375bbdf900983841"
+  integrity sha512-t1fgbuhURcWc8VgZk8kJQ3QmmZk3kghDcf0wpsN8I8RaV05IUkc2b195KpGqgocKT/q8+vKk6EcB2c7N2lAd6A==
 
 signal-exit@^4.0.1:
   version "4.0.2"

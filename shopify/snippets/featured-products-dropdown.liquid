@@ -1,0 +1,13 @@
+<variant-swatch>
+  <input type="hidden" name="id" value="{{ variants.first.id }}">
+  <div class="relative my-5">
+    <select name="variant" class="bg-transparent w-full border-dark-pink border-b-[1px] py-2">
+      {% for variant in variants %}
+        <option value="{{ variant.id }}" class="text-lg">{{ variant.title }}</option>
+      {% endfor %}
+    </select>
+    <svg class="absolute top-0 right-0 bottom-0 m-auto bg-pink" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M3 9L11.5 16L20 9" stroke="#242323" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+  </div>
+</variant-swatch>

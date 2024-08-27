@@ -1,7 +1,10 @@
-import { register, load } from "@shopify/theme-sections";
-import Header from "@/shopify/sections/header";
-import FeaturedProducts from "@/shopify/sections/featured-products";
+import { register, load } from "@shopify/theme-sections"
+import Header from "@/shopify/sections/header"
+import FeaturedProducts from "@/shopify/sections/featured-products"
+import cart_section from "@/shopify/sections/cart"
 
-register("header", Header);
-register("featured-products", FeaturedProducts);
-load("*");
+cart_section.init()
+
+register("header", Header)
+register("featured-products", FeaturedProducts)
+load("*")

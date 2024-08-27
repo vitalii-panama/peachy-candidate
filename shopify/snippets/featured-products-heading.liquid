@@ -3,7 +3,7 @@
   capture heading_formatted
     for word in heading
       if forloop.last
-        echo '<span class="text-white">'
+        echo '<span class="text-white md:text-black">'
         echo word
         echo '</span>'
       else
@@ -13,4 +13,4 @@
     endfor
   endcapture
 %}
-<div class="heading font-adorn-condensed-sans text-center text-black text-heading1 mt-4 text-shadow">{{ heading_formatted | join: '[separator]' |  replace: '[separator]', ' ' }}</div>
+<div class="heading font-adorn-condensed-sans text-center text-black text-heading1 my-4 text-shadow">{{ heading_formatted | join: '[separator]' |  replace: '[separator]', ' ' }}</div>

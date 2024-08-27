@@ -17,6 +17,17 @@ module.exports = {
       textShadow: {
         DEFAULT: "1px 2px #000",
       },
+      boxShadow: {
+        "atc-shadow": "5px 8px 0 0 #000",
+      },
+      gridTemplateColumns: {
+        "auto-fill-minmax": "repeat(auto-fill, minmax(300px, 1fr))"
+      },
+      colors: {
+        pink: "#FDF5F4",
+        "dark-pink": "#FDE0DC",
+        atc: "#FFD11F",
+      },
     },
   },
 

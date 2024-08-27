@@ -1,0 +1,27 @@
+<div class="swiper overflow-y-clip md:pb-0 pb-8">
+  <div class="md:grid md:grid-cols-auto-fill-minmax md:gap-8 md:max-w-[1360px] mx-auto swiper-wrapper">
+    {% for product in collection.products %}
+      <form action="/cart/add" class="item bg-pink p-5 rounded-lg border-4 border-dark-pink swiper-slide h-auto">
+        <div class="flex flex-col justify-between h-full">
+          <div>
+            <a href="{{ product.url }}">
+              <img class="w-full rounded-lg" width="278" height="292" src="{{ product.featured_image.src | image_url: width: 278, height: 292 }}" alt="{{ product.featured_image.alt }}">
+            </a>
+            <a href="{{ product.url }}">
+              <h3 class="text-center font-adorn-condensed-sans text-3xl mt-5">{{ product.title }}</h3>
+            </a>
+          </div>
+          <div>
+            {% render 'featured-products-dropdown', variants: product.variants %}
+            <button class="bg-atc p-3 w-full mt-3 text-sm uppercase tracking-wide font-semibold border-2 border-black rounded-sm hover:shadow-atc-shadow hover:-translate-y-2 hover:-translate-x-2 transition-all" type="submit">{{ product.first_available_variant.price | money }} | Add To Cart</button>
+          </div>
+        </div>
+      </form>
+    {% endfor %}
+  </div>
+  <div class="swiper-pagination mt-20" style="
+  --swiper-pagination-bottom: -5px;
+  --swiper-pagination-bullet-size: 10px;
+  --swiper-pagination-color: #FFD11F;
+  "></div>
+</div>

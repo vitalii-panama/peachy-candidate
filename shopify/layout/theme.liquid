@@ -24,10 +24,6 @@
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
 
-    {% comment %}theme-check-disable ParserBlockingJavaScript{% endcomment %}
-    <script src="{{ 'jquery-3.6.0.min.static.js' | asset_url }}"></script>
-    {% comment %}theme-check-enable ParserBlockingJavaScript{% endcomment %}
-    <script src="{{ 'rivets-cart.min.static.js' | asset_url }}" defer></script>
     <script
       src="{{ 'option_selection.js' | shopify_asset_url }}"
       defer
@@ -60,10 +56,6 @@
       }
 
       document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
-
-      jQuery(function() {
-        CartJS.init({{ cart | json }});
-      });
     </script>
   </head>
 
